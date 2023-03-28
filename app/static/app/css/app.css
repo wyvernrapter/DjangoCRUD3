@@ -1,0 +1,33 @@
+.section{
+    background-color:#00d6ff;
+    width:20vw;
+    height:5vh;
+    text-align:center;
+}
+
+.section2{
+    background-color:#00d6ff;
+    width:10vw;
+    height:5vh;
+    text-align:center;
+}
+
+.position{
+    width:20vw;
+    text-align:center;
+    border:solid thin;
+}
+
+.table-size{
+    width:100vw;
+}
+
+.row{
+    margin-top:3px;
+    margin-bottom:3px;
+}
+
+.menu-width{
+    width:10%;
+    height:10px;
+}

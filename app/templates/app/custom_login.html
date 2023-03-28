@@ -1,0 +1,43 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'app/css/login.css' %}">
+<!-- Content -->
+<div  id="container">
+  <header class="label-color-head">
+      <h1 class="text-position" style="margin-top: 0px;">TASKAR</h1>
+  </header>
+  <main class="login">
+    <div id="header">
+      <h1 class="text-position" id="site-name">TASKARログインページ</h1>
+    </div>
+    <div id="content" class="card">
+      <div class="card-body">
+        <form method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+          <div class="form-row form-floating mb-3">
+            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+            <label for="id_username">ユーザー名</label>
+          </div>
+          <div class="form-row form-floating mb-3">
+            <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+            <label for="id_password">パスワード</label>
+          </div>
+          <div class="submit-row d-grid gap-2 mb-3">
+            <button class="btn btn-lg btn-primary" type="submit">ログイン</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <h4 class="label-color" style="margin-bottom:0px">&copy; 2023 TASKAR. All Rights Reserved.</h4>
+  </footer>
+  <div class="text-min">
+    <p>※パスワードがわからない、<br>若しくはまだ無いという方は<br>管理本部(下記)にお問い合わせ下さい。</p>
+    <center><p>E-mail:</p><a class="text-min" href="#" >wataru.hatori@taskar.jp</a></center><br>
+    <p>電話:090-3590-0351</p>
+  </div>
+</div>
+{% endblock content %}

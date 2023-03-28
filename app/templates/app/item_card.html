@@ -1,0 +1,53 @@
+<center>
+<table>
+        <tr>
+            <td class="section">名前</td>
+            <td class="position">{{ item.name }}</td>
+        </tr>
+        <tr>
+            <td class="section">社員番号</td>
+            <td class="position">{{ item.employee_number }}</td>
+        </tr>
+        <tr>
+            <td class="section">役職</td>
+            <td class="position">{{ item.rank}}</td>
+        </tr>
+        <tr>
+            <td class="section">所属部署</td>
+            <td class="position">{{ item.section}}</td>
+        <tr>
+            <td class="section">メールアドレス</td>
+            <td class="position">{{ item.email_add}}</td>
+        </tr>
+        <tr>
+            <td class="section">電話番号</td>
+            <td class="position">{{ item.phone}}</td>
+        </tr>
+        {% if user.is_superuser %}
+        <tr>
+            <td class="section">住所</td>
+            <td class="position">{{ item.address}}</td>
+        </tr>
+        <tr>
+            <td class="section">最寄駅</td>
+            <td class="position">{{ item.station1}}</td>
+        </tr>
+        <tr>
+            <td class="section">年齢</td>
+            <td class="position">{{ item.age }}</td>
+        </tr>
+        <tr>
+            <td class="section">性別</td>
+            <td class="position">{{ item.get_sex_display }}</td>
+        </tr>
+        <tr>
+            <td class="section">備考</td>
+            <td class="position">{{ item.memo|linebreaksbr }}</td>
+        </tr>
+        <tr>
+            <td class="section">登録日</td>
+            <td class="position">{{ item.created_at }}</td>
+        </tr>
+        {% endif %}
+</table>
+</center>

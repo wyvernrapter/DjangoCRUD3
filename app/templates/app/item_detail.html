@@ -1,0 +1,16 @@
+{% extends "./_base.html" %}
+{% block content %}
+<div style="height:75vh;" class="container">
+	<h1 class="text-center">詳細表示</h1>
+	<!--  -->
+	{% include "./item_card.html" %}
+	<div class="row">
+		<div class="col-12">
+			<a class="btn btn-outline-secondary float-right" href="{% url 'index' %}">戻る</a>
+			{% if user.is_superuser %}
+			<a class="btn btn-outline-secondary float-right" href="{% url 'update' item.pk %}">編集</a>
+			{% endif %}
+		</div>
+	</div>
+</div>
+{% endblock %}

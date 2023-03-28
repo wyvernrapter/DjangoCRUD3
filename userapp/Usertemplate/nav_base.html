@@ -1,0 +1,34 @@
+<body style="height:100vh">
+    <div style="background-color:#00d6ff">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a style="margin-right:60vw;" class="navbar-brand" href="{% url 'index' %}" style="margin-right:75vw">TASKR</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false"
+            aria-label="ナビゲーションの切替">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        {% if user.is_authenticated %}
+            <p>{{ user.get_username }}さん</p>
+        {% else %}
+            <p>ログインしていません</p>
+        {% endif %}
+        <div class="collapse navbar-collapse" id="Navber" >
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <table>
+                        <tr>
+                            <th>
+                                <a class="nav-link" href="{% url 'admin:index'%}">管理サイト</a>
+                            </th>
+                            <th>
+                                <a class="nav-link" href="{% url 'admin:logout'%}">ログアウト</a>
+                            </th>
+                            <th>
+                                <a class="nav-link" href="{% url 'user_allphoneinf' %}">全従業員連絡表</a>
+                            </th>
+                        </tr>
+                </table>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+    </div>

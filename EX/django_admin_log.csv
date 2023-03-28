@@ -1,0 +1,7 @@
+id,object_id,object_repr,action_flag,change_message,content_type_id,user_id,action_time
+1,1,羽鳥航,1,"[{""added"": {}}]",7,1,2023-01-02 14:04:40.739815
+2,2,rapter1996,1,"[{""added"": {}}]",4,1,2023-01-02 14:07:08.858637
+3,2,羽鳥航,2,"[{""changed"": {""fields"": [""Username"", ""First name"", ""Last name"", ""Email address"", ""Superuser status""]}}]",4,1,2023-01-02 14:09:07.609660
+4,2,羽鳥航,2,"[{""changed"": {""fields"": [""Staff status""]}}]",4,1,2023-01-02 14:09:55.938851
+5,3,administrator2,1,"[{""added"": {}}]",4,2,2023-01-05 06:11:38.713757
+6,3,administrator2,2,"[{""changed"": {""fields"": [""First name"", ""Staff status"", ""Superuser status"", ""User permissions""]}}]",4,2,2023-01-05 06:12:45.763315
